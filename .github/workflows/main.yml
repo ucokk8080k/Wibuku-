@@ -12,8 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Extract WIBUKU
-        run: unzip -o WIBUKU-android-build-ready.zip -d extracted
+      - name: Install Android platform
+        run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
       - name: Setup Java
         uses: actions/setup-java@v4
